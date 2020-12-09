@@ -1,0 +1,150 @@
+
+<Details>:
+    size_hint:1,1
+    pos_hint:{'center_x':.5,'center_y':.5}
+    MDTextField:
+        id: content
+        pos_hint:{'center_x':.5,'top':.95}
+        hint_text: "Content"
+        font_name: "Roboto-Regular"
+        font_size:"20sp"
+        multiline: True
+        size_hint_x:.9
+        size_hint_y: None
+        color_mode: 'custom'
+        line_color_focus:(1,1,1,1)
+
+    Label:
+        text:"Color of stickynote"
+        pos_hint:{'center_x':.5,'center_y':.3}
+        font_name: "Roboto-Black"
+        font_size:"20sp"
+
+    MDTextField:
+        id:color
+        on_focus: if self.focus: root.menu.open()
+        pos_hint:{'center_x':.5,'top':.25}
+        hint_text: "Choose a color"
+        font_name: "Roboto-Regular"
+        font_size:"20sp"
+        size_hint_x:.4
+        size_hint_y: None
+        color_mode: 'custom'
+        line_color_focus:(1,1,1,1)
+
+    MDRaisedButton:
+        id:save
+        text:'Save Changes'
+        pos_hint:{'center_x':.3,'top':.1}
+
+    MDRaisedButton:
+        id:delete
+        text:'Delete'
+        pos_hint:{'center_x':.7,'top':.1}
+
+
+<LoginScreen>:
+    canvas:
+        Color:
+            rgba:0.1,0.1,0.1,1
+        Rectangle:
+            size:self.size
+            pos:self.pos
+
+    MDTextField:
+        id:user
+        hint_text: "User"
+        pos_hint:{'center_x':.5, "center_y":.7}
+        size_hint:(.3,.1)
+        mode: "rectangle"
+
+
+    MDTextField:
+        id:paswd
+        hint_text: "Password"
+        pos_hint:{'center_x':.5, "center_y":.5}
+        size_hint:(.3,.1)
+        mode: "rectangle"
+
+    MDRaisedButton:
+        text:"Login"
+        on_press:self.parent.login(user.text, paswd.text)
+        pos_hint:{'center_x':.5, "center_y":.3}
+        size_hint:(0.3,0.1)
+
+
+<MainScreen>:
+    canvas:
+        Color:
+            rgba:0.1,0.1,0.1,1
+        Rectangle:
+            size:self.size
+            pos:self.pos
+
+    BoxLayout:
+        orientation:'horizontal'
+
+        MDNavigationRail:
+            id:sidebar
+            md_bg_color: 0.2,0.2,0.2,1
+            use_resizeable: True
+            use_action_button: True
+            use_title: True
+            text_title:"Sticky Notes"
+            action_text_button: "New"
+            action_color_button: app.theme_cls.primary_color
+            use_hover_behavior: True
+            hover_bg: 0, 0, 0, .2
+
+            MDNavigationRailItem:
+                icon:"account"
+                text:"account"
+                on_press:root.screen_switcher(self,2)
+
+            MDNavigationRailItem:
+                icon:"note"
+                text:"Notes"
+                on_press:root.screen_switcher(self,1)
+        ScrollView:
+            do_scroll_y: True
+            id:scroller
+            GridLayout:
+                id: container
+                cols:3
+                height:self.minimum_height
+                size_hint_y:None
+                size_hint_x:1
+                padding:'20dp'
+                spacing:'20dp'
+
+
+<User_Details>:
+    size_hint:1,1
+    pos_hint:{'center_x':.5,'center_y':.5}
+
+    MDTextField:
+        id: user_name
+        pos_hint:{'center_x':.5,'top':.7}
+        hint_text: "Set User Name"
+        font_name: "Roboto-Regular"
+        font_size:"20sp"
+        size_hint_x:.9
+        max_text_length: 30
+        color_mode: 'custom'
+        line_color_focus:(1,1,1,1)
+
+    MDTextField:
+        id: password
+        pos_hint:{'center_x':.5,'top':.4}
+        hint_text: "Set Password"
+        font_name: "Roboto-Regular"
+        font_size:"20sp"
+        size_hint_x:.9
+        max_text_length: 30
+        color_mode: 'custom'
+        line_color_focus:(1,1,1,1)
+
+    MDRaisedButton:
+        id:save
+        text:'Save Changes'
+        pos_hint:{'center_x':.5,'top':.15}
