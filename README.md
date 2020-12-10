@@ -30,7 +30,7 @@ The database files are also provided inside a folder called stickynote
 Here are some screenshots of the program running...
 
 + **Login Page**  ![loginscreen](images/loginscreen.png)
-+ **MainScreen**  ![Mainscreen](images/mainsscreen.png)
++ **MainScreen**  ![Mainscreen](images/mainscreen.png)
 + **Modifying an Existing Note**  ![Modifying an existing note](images/editingnote.png)
 + **Adding A New Note**  ![Adding a new note](images/createnewnote.png)
 + **User Menu**  ![User Menu](images/usermenue.png)
