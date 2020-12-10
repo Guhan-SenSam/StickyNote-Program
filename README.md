@@ -24,6 +24,6 @@ The program uses Mysql to store all the date of the program and its users. There
 # Images
 Here are some screenshots of the program running...
 
-+**Login Page** (images/loginscreen.png)
++ **Login Page**  ![loginscreen](images/loginscreen.png)
 
 
