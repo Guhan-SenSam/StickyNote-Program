@@ -24,6 +24,8 @@ The program uses Mysql to store all the date of the program and its users. There
 +**User table**: This table is called users and contains the user ids and passwords for all the users. Both the username and the password is limited to the 30 characters.
 +**Sticky Note Table**: Each user will get their own table in their user id name. This table stores all the stickynotes that he or she creates. It has a structure of: id(the id is a random number that basically acts like a primary key), content(contains the actual content of the stickynote), date (contains the data the note was created), color (holds an int from 0-9 that reference the notes color)
 
+The database files are also provided inside a folder called stickynote
+
 # Images
 Here are some screenshots of the program running...
 
