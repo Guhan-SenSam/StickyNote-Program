@@ -4,6 +4,9 @@ This is a very basic stickynote program that was created within python using the
 # Note
 This program was intended to show how easy it is ot create a gui with kivy and kivymd so numerous shortcuts where taken and there are various loopholes in the logic in the program. This was done to keep the complexity of the program down. But major features are somewat foolproof.
 
+
+Please also note that I have very slighly modified the kivymd card widget so that I could make it colored and also give it a name property. I have added the kivymd library with the changes in the repo.
+
 # Overview
 The program works on the idea that there are multiple users with their own user name and login password. Each user is able to maintain his/her stickynotes separate from the rest and muct login to view and update these notes. A user once logged in can view,update and delete any notes. The notes are ordered on GUi based on the date they where created.(The latest created note being the last)
 
@@ -25,5 +28,9 @@ The program uses Mysql to store all the date of the program and its users. There
 Here are some screenshots of the program running...
 
 + **Login Page**  ![loginscreen](images/loginscreen.png)
-
-
++ **MainScreen**  ![Mainscreen](images/mainsscreen.png)
++ **Modifying an Existing Note**  ![Modifying an existing note](images/editingnote.png)
++ **Adding A New Note**  ![Adding a new note](images/createnewnote.png)
++ **User Menu**  ![User Menu](images/usermenue.png)
++ **Updating A User's Credentials**  ![Updating A User's Credentials](images/updateuserdetails.png)
++ **Adding A New User**  ![Adding a new User](images/newusermenue.png)
